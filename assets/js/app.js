@@ -12,8 +12,6 @@ var content = document.querySelector('.content')
 var body = document.querySelector('body')
 
 
-var hot = "linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url('(/Day_9/assets/img/Hot/1.png') no-repeat center / cover"
-var hot2 = "url('/Day_9/assets/img/Cold/3.png') no-repeat center / cover;"
 async function callApi(cityname){
     input.value.trim()
     // let apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityname}&limit=3&appid=09272c46834a3c38eecc6b22eaa5b141`
