@@ -11,34 +11,38 @@ var humidity = document.querySelector('.humidity span')
 var content = document.querySelector('.content')
 var body = document.querySelector('body')
 
-async function callApi(cityname){
+// async function callApi(cityname){
+function callApi(cityname){
     input.value.trim()
     let apiUrl = `http://api.weatherapi.com/v1/current.json?key=688de6393621492ab54104807221005&q=${cityname}`
 
-    let data = await fetch(apiUrl).then(res => res.json())
+    // let data = await fetch(apiUrl).then(res => res.json())
+    var data
+    fetch(apiUrl)
+        .then(function(response){
+                return response.json();
+                // JSON -> Javasript type
+        })
+        .then(function(data){
+                city.innerText = data.location['name']
+                country.innerText = data.location['country']
+                time.innerText = data.location['localtime']
+                temperature.innerHTML = data.current['temp_c']+' <sup>o</sup>C'
+                itStatus.innerText = data.current.condition['text']
+                eyesight.innerText = data.current['vis_km']
+                wind.innerText = data.current['wind_kph']
+                humidity.innerText = data.current['humidity']
 
-    console.log(data.current.condition['code'])
-    console.log(data)
-
-    city.innerText = data.location['name']
-    country.innerText = data.location['country']
-    time.innerText = data.location['localtime']
-    temperature.innerHTML = data.current['temp_c']+' <sup>o</sup>C'
-    itStatus.innerText = data.current.condition['text']
-    eyesight.innerText = data.current['vis_km']
-    wind.innerText = data.current['wind_kph']
-    humidity.innerText = data.current['humidity']
-
-    if(data.current['temp_c']> 20){
-        content.classList.add('hotbgcard')
-        body.classList.add('hotbg')
-    }
-    else{
-        content.classList ='content'
-        body.classList =''
-    }
+                if(data.current['temp_c']> 20){
+                    content.classList.add('hotbgcard')
+                    body.classList.add('hotbg')
+                }
+                else{
+                    content.classList ='content'
+                    body.classList =''
+                }
+        })
 }
-
 
 input.addEventListener('keydown', function(e){
     if(e.code == 'Enter'){
