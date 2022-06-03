@@ -14,7 +14,7 @@ var body = document.querySelector('body')
 // async function callApi(cityname){
 function callApi(cityname){
     input.value.trim()
-    let apiUrl = `http://api.weatherapi.com/v1/current.json?key=688de6393621492ab54104807221005&q=${cityname}`
+    let apiUrl = `https://api.weatherapi.com/v1/current.json?key=688de6393621492ab54104807221005&q=${cityname}`
 
     // let data = await fetch(apiUrl).then(res => res.json())
     var data
