@@ -17,7 +17,7 @@ body{
     justify-content: center;
     align-items: center;
     background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0.5)),
-    url('/assets/img/cold.png') no-repeat center / cover;
+    url('https://raw.githubusercontent.com/duchung45644/Weather-app/master/assets/img/cold.png') no-repeat center / cover;
 }
 
 .content{
@@ -29,7 +29,7 @@ body{
     height: 600px;
     padding: 30px 20px;
     border-radius: 12px;
-    background: url('/assets/img/cold.png') no-repeat center / cover;
+    background: url('https://raw.githubusercontent.com/duchung45644/Weather-app/master/assets/img/cold.png') no-repeat center / cover;
 }
 
 .content input{
@@ -96,11 +96,11 @@ body{
 }
 
 .hotbg{
-    background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url('/assets/img/hot.png') no-repeat center / cover;
+    background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url('https://raw.githubusercontent.com/duchung45644/Weather-app/master/assets/img/hot.png') no-repeat center / cover;
 }
 
 .hotbgcard{
-    background: url('/assets/img/hot.png') no-repeat center / cover;
+    background: url('https://raw.githubusercontent.com/duchung45644/Weather-app/master/assets/img/hot.png') no-repeat center / cover;
 }
 
 
