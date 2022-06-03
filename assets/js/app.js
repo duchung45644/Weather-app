@@ -11,7 +11,6 @@ var humidity = document.querySelector('.humidity span')
 var content = document.querySelector('.content')
 var body = document.querySelector('body')
 
-
 async function callApi(cityname){
     input.value.trim()
     let apiUrl = `http://api.weatherapi.com/v1/current.json?key=688de6393621492ab54104807221005&q=${cityname}`
