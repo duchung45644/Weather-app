@@ -42,6 +42,7 @@ function callApi(cityname){
                     body.classList =''
                 }
         })
+        .catch( error => console.error(error));
 }
 
 input.addEventListener('keydown', function(e){
